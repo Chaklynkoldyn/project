@@ -3,7 +3,6 @@ class CreateBlogs < ActiveRecord::Migration[6.1]
     create_table :blogs do |t|
       t.string :title
       t.text :body
-      t.references :commentable, polymorphic: true
       t.timestamps
     end
   end

@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   root "articles#index"
 
    resources :articles do
-     resources :comments
+     resources :comments, module: :articles
    end
 
   resources :blogs do
-    resources :comments
+    resources :comments, module: :blogs
   end
 
   get 'home/index', as: 'home'
